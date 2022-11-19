@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/meta.ejs') %>
+    <title>ABCDE's bug submission ticket</title>
+  </head>
+  <body>
+    <%- include('partials/nav2.ejs') %>
+    <main>
+      <div>
+        <h1>Dashboard</h1>
+      </div>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email/Phone</th>
+          <th>View</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+        <% for(var submission of submissions){ %>
+        <tr>
+          <td>
+            <a href="/print/<%= submission._id %>"><%= submission._id %></a>
+          </td>
+          <td><%= submission.userName %></td>
+          <td><%= submission.userEmailOrPhone %></td>
+          <td><%- submission.bugDescription %></td>
+          <td><img src="uploads/<%= submission.bugImageName %>" alt="" /></td>
+          <td><a href="/edit/<%= submission._id %>">EDIT</a></td>
+          <td><a href="/delete/<%= submission._id %>">DELETE</a></td>
+        </tr>
+        <% } %>
+      </table>
+    </main>
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

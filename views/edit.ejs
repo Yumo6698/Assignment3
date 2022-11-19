@@ -1,0 +1,68 @@
+<% var userName = ''; var userEmailOrPhone = ''; var bugDescription = ''; var
+userNameError = ''; var userEmailOrPhoneError = ''; var bugDescriptionError =
+''; if(typeof(er) != 'undefined') { for(var error of er) { switch(error.param){
+case 'userName': userName = error.value; userNameError = error.msg; break; case
+'userEmailOrPhone': userEmailOrPhonel = error.value; userEmailOrPhone =
+error.msg; break; case 'bugDescription': bugDescription = error.value;
+bugDescriptionError = error.msg; break; } } } %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/meta.ejs') %>
+    <title>ABCDE's bug submission ticket</title>
+  </head>
+  <body>
+    <%- include('partials/nav2.ejs') %>
+    <main>
+      <form
+        action="/editprocess/<%= _id %>"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <!--enctype="multipart/form-data" maybe needs to be get rid of-->
+        <div class="wrapper">
+          <label for="userName">User Name</label>
+          <input
+            type="text"
+            id="userName"
+            name="userName"
+            value="<%= userName %>"
+          />
+          <p class="error"><%= userNameError %></p>
+        </div>
+        <div class="wrapper">
+          <label for="userEmailOrPhone">User Email</label>
+          <input
+            type="text"
+            id="userEmailOrPhone"
+            name="userEmailOrPhone"
+            value="<%= userEmailOrPhone %>"
+          />
+          <p class="error"><%= userEmailOrPhoneError %></p>
+        </div>
+        <div class="wrapper">
+          <label for="scaryImage">Bug Image</label>
+          <input type="file" id="bugImage" name="bugImage" />
+        </div>
+        <div class="wrapper">
+          <label for="bugDescription">Bug Description</label>
+          <input type="text" id="bugDescription" name="bugDescription" />
+          <!--<p class="error"><%= bugDescriptionError %></p>-->
+        </div>
+        <div class="submission">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </main>
+
+    <%- include('partials/footer.ejs') %>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/tinymce/tinymce.min.js"></script>
+    <script>
+      tinymce.init({
+        selector: "#bugDescription",
+      });
+    </script>
+  </body>
+</html>

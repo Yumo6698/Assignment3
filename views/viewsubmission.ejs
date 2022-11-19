@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/meta.ejs') %>
+    <title>ABCDE's bug submission ticket</title>
+  </head>
+  <body>
+    <%- include('partials/nav2.ejs') %>
+    <main>
+      <div>
+        <h1>View</h1>
+      </div>
+      <div>
+        <img src="/uploads/<%= bugImageName %>" alt="bugSnapshot">
+      </div>
+      <div>
+        <h2><b>Name: </b> <%= userName %> <br />
+        <h2><b>Email/Phone: </b> <%= userEmailOrPhone %> <br />
+      </div>
+      <div>
+        <h2>Bug Description:</h2>
+        <p><%- bugDescription %></p>
+      </div>
+    </main>
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

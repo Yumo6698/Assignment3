@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/meta.ejs') %>
+    <title>ABCDE's bug submission ticket</title>
+  </head>
+  <body>
+    <%- include('partials/nav1.ejs') %>
+    <main>
+      <div>
+        <h1>Login</h1>
+      </div>
+      <form action="login" method="POST">
+        <div class="wrapper">
+          <label for="adminName">Username:</label>
+          <input type="text" id="adminName" name="adminName" />
+        </div>
+        <div class="wrapper">
+          <label for="adminPassword">Password:</label>
+          <input type="adminPassword" id="adminPassword" name="adminPassword" />
+        </div>
+        <div class="submission">
+          <input type="submit" value="Login as admin" />
+        </div>
+      </form>
+    </main>
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>
