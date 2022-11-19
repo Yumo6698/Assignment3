@@ -1,32 +1,24 @@
-### Assignment3
+#Assignment3
 
-### App for Submit Bug/Defect/Glitch
+# App for Submit Bug/Defect/Glitch
 
-# Setup
+### Setup
 ```
 In Visual Stuidio Code terminal:
 1. Enter "npm i express" and run.
 2. Enter "npm i -D nodemon" and run.
+3. Enter "npm i mongoose" and run.
+4. Enter "npm i" and run.
 
+Navigate to https://www.mongodb.com/try/download/compass
+Hit green button, "Download", inside form of "MongoDB Compass Download"
+After complete downloaded, run MongoDB Compass.
 
+In MongoDB Compass, hit "Connect" in form, "New Connection".
 
-## Install the readmeio package from npm
-
-```
-npm install readmeio --save
-```
-
-## Install node modules
-
-```
-npm -i
-```
-
-# Run NodeJS
-
-```
-node index.js
-```
+### Run
+In Visual Stuidio Code terminal:
+Enter "npm run dev" and run.
 
 # Mit License
 
