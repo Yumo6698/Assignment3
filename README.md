@@ -2,7 +2,13 @@
 
 ### App for Submit Bug/Defect/Glitch
 
-# Express.js Integration
+# Setup
+```
+In Visual Stuidio Code terminal:
+1. Enter "npm i express" and run.
+2. Enter "npm i -D nodemon" and run.
+
+
 
 ## Install the readmeio package from npm
 
