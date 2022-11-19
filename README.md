@@ -14,7 +14,7 @@ In Visual Stuidio Code terminal:
 
 Navigate to https://www.mongodb.com/try/download/compass
 Hit green button, "Download", inside form of "MongoDB Compass Download"
-After complete downloaded, run MongoDB Compass.
+After completing download, run MongoDB Compass.
 
 In MongoDB Compass, hit "Connect" in form, "New Connection".
 ```
