@@ -23,6 +23,7 @@ In MongoDB Compass, hit "Connect" in form, "New Connection".
 ```
 In Visual Stuidio Code terminal:
 Enter "npm run dev" and run.
+paste http://localhost:8080/ into a web browser and hit enter.
 ```
 
 ## Mit License
